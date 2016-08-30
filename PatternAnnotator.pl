@@ -162,23 +162,23 @@ Francesco Lescai - Email E<lt>lescai@biomed.au.dkE<gt>
 ##### Connecting to the ENSEMBL database #####
 ##############################################
 # For using online databases
-# my $registry = 'Bio::EnsEMBL::Registry';
-#
-# $registry->load_registry_from_db(
-#     -host => 'ensembldb.ensembl.org',
-#     -user => 'anonymous'
-# );
-
-# For using local databases
 my $registry = 'Bio::EnsEMBL::Registry';
 
 $registry->load_registry_from_db(
-   -host => 'vm7',
-   -user => 'anonymous',
-   -database => 'human',
-   -db_version => '75'
+    -host => 'ensembldb.ensembl.org',
+    -user => 'anonymous'
 );
-die ("Can't initialise registry") if (!$registry);
+
+# For using local databases
+# my $registry = 'Bio::EnsEMBL::Registry';
+#
+# $registry->load_registry_from_db(
+#    -host => 'vm7',
+#    -user => 'anonymous',
+#    -database => 'human',
+#    -db_version => '75'
+# );
+# die ("Can't initialise registry") if (!$registry);
 
 # Getting adaptors
 my $cs_adaptor = $registry->get_adaptor( 'Human', 'Core', 'CoordSystem' );
