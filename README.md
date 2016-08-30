@@ -15,7 +15,7 @@ VCF-files must have the format outputted by GATK (version 2.7-2), so variants wi
 By running the command "perldoc PatternAnnotator.pl" instructions of how to run the script and what it does
 is available.
 
-# Note:
+# Running on local databases
 If you choose to run the script using local databases then the following needs to be changed such that you
 query the local databases instead of the online databases:
 
