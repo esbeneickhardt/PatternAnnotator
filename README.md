@@ -19,15 +19,12 @@ is available.
 If you choose to run the script using local databases then the following needs to be changed such that you
 query the local databases instead of the online databases:
 
-##############################################
-##### Connecting to the ENSEMBL database #####
-##############################################
-# For using online databases
-my $registry = 'Bio::EnsEMBL::Registry';
-
-$registry->load_registry_from_db(
-    -host => 'ensembldb.ensembl.org',
-    -user => 'anonymous'
-);
+    # For using online databases
+    my $registry = 'Bio::EnsEMBL::Registry';
+    
+    $registry->load_registry_from_db(
+        -host => 'ensembldb.ensembl.org',
+        -user => 'anonymous'
+    );
 
 Instructions on how to query local databases through the API can also be found on the Ensembl website.
